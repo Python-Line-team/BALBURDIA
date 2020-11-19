@@ -89,6 +89,12 @@ class SensorCor{
     else if(Green < Red && Green < Blue){
       return 2;// verde
     }
-    return 3;//outro (preto, azul, vermelho)
+    else if(Red < Green && Red < Blue) {
+      return 3;//  vermelho
+    }
+    else if(Blue < Red && Blue < Green && Light < 180) {
+      return 4;//  azul
+    }
+    return 5;
     }
   };
